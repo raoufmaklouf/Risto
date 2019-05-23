@@ -6,7 +6,7 @@ import dateutil.parser
 
 
 
-
+#chek user input
 def userdate(udate):
     user_date = dateutil.parser.parse(udate)
     tody= datetime.datetime.today()
@@ -19,11 +19,7 @@ def user_guest(guests):
     if guests > 0 and guests <= 20:
         return True
     else:
-        return False
-
-
-
-    
+        return False    
 
 def home(request):
     form=ReserveForm(request.POST)
