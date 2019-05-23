@@ -6,10 +6,12 @@ Site planner for a restaurant Icludes System Smart Reservation creat with Django
 
 1-cd src
 
-2-touch db.sqlite3
+2-pip install django 
 
-3-python3 manage.py createsuperuser "creat new super user"
+3-touch db.sqlite3
 
-4-python3 manage.py runserver
+4-python3 manage.py createsuperuser "creat new super user"
+
+5-python3 manage.py runserver
 
 
