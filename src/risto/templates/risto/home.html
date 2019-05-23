@@ -1,0 +1,291 @@
+{% load static %} {% load crispy_forms_tags%}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{%static 'risto/css/bootstrap.min.css'%}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{%static 'risto/css/style.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+    <title>Casa Del Gelato</title>
+    <link rel="icon" href="{% static 'risto/images/logo.jpg'%}">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div id="Welcome">
+        <!---Start navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar fixed-top  navbar-light bg-light">
+
+            <a class="navbar-brand" href="#Welcome">
+                <img class="rounded-circle" src="{% static 'risto/images/logo.jpg'%}" width="50" height="50" class="d-inline-block" alt=""> Casa Del Gelato
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    		<span class="navbar-toggler-icon"></span>
+		 		</button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Welcome">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Restaurant">Restaurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Reservation">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#OurLocation">Our Location</a>
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--- End Navigation Bar -->
+        {
+        <!--- Start Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 img-fluid img-slider" src="{% static 'risto/images/chef3.jpg'%}" alt="First slide">
+                    <div class="carousel-caption">
+                        <h2>Welcome!</h2>
+                        {% if messages %} {% for message in messages %}
+                        <div id="hideMe" class="alert alert-success">
+                            {{message}}
+                        </div>
+                        {% endfor %}{{message}} {% endif %}
+                        <p>...</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--- End of Carousel -->
+    <!--- Restaurant-->
+    <div class="container">
+        <div class="row" id="Restaurant">
+            <div class="col navMenu">
+                <h2 class="text-center">~ Restaurant ~</h2>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <div class="col-md-6">
+                <h3>Location</h3>
+                <p>Our restaurant is located in the tourist area of ​​Sousse and overlooks the sea.</p>
+                <h5>A Unique Experience</h5>
+                <p>thanks for your visit. We are an authentic Italian restaurant in Sousse, serving delicious Italian cuisine cooked by the best chefs. It takes only a few minutes to browse our site and review our list. We hope you will join us soon for
+                    a wonderful Italian culinary experience.</p>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <img class="img-fluid" src="{% static 'risto/images/blur-close-up-cutlery.jpg'%}">
+            </div>
+        </div>
+        <div class="row bg-light"><br></div>
+        <div class="row bg-light">
+            <div class="col-md-6 order-md-1 order-2" data-aos="fade-up">
+                <img class="img-fluid " src="{% static 'risto/images/asparagus-bar.jpg'%}">
+            </div>
+            <div class="col-md-6 order-md-12 order-1">
+                <h3>Cuisine</h3>
+                <p>Our chefs are special people and have a carefully chosen skill on the quality of our services. We are happy to visit you.</p>
+                <h5>A Unique Experience</h5>
+                <p>Our food ingredients are 100% organic We deal with local farmers to ensure the quality of our products</p>
+            </div>
+        </div>
+        <!--- End of Restaurant -->
+        <!--- Start of Menu-->
+        <div class="row" id="Menu">
+            <div class="col navMenu">
+                <h2 class="text-center">~ Menu ~</h2>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <div class="col-md-4" data-aos="slide-up">
+                <div class="card view zoom">
+                    <img class="card-img-top img-fluid " src="{% static 'risto/images/meat-menu.jpg'%}">
+                    <div class="card-body">
+                        <h5 class="card-title">~ Meat Menu ~</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Bocconcini di carne in nido di sfoglia</li>
+                            <li class="list-group-item">Bruschette con maiale al curry</li>
+                            <li class="list-group-item">Uova al prosciutto</li>
+                            <li class="list-group-item">Vitello tonnato</li>
+                            <li class="list-group-item">Fesa di tacchino marinata con olive</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="slide-up">
+                <div class="card">
+                    <img class="card-img-top img-fluid " src="{% static 'risto/images/fish-menu.jpg'%}">
+                    <div class="card-body">
+                        <h5 class="card-title">~ Fish Menu ~</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Carpaccio di polpo</li>
+                            <li class="list-group-item">Cozze al verde</li>
+                            <li class="list-group-item">Cocktail di gamberi</li>
+                            <li class="list-group-item">Risotto alla crema di scampi</li>
+                            <li class="list-group-item">Ravioli di pesce con crema di scampi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="slide-up">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="{% static 'risto/images/pizza.jpg'%}">
+                    <div class="card-body">
+                        <h5 class="card-title">~ Pizza Menu ~</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Blazing Seafood</li>
+                            <li class="list-group-item">Chicken Supreme</li>
+                            <li class="list-group-item">Veggie Lover</li>
+                            <li class="list-group-item">Deluxe Cheese</li>
+                            <li class="list-group-item">Beef Pepperoni</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- End of Menu -->
+        <!--- Start of Reservation-->
+        <div class="row" id="Reservation">
+            <div class="col navMenu">
+                <h2 class="text-center">~ Reservation ~</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-lg-12 reserve-container" data-aos="fade-up">
+                <img class="img-fluid image-reserve" src="{% static 'risto/images/catering2.jpg'%}">
+                <div class="reserve-text col-lg-12 ">
+                    <h1 class="text-center">Timetables</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="text-center">Lunch</h2>
+                            <h5 class="text-center">12:00 - 15:00</h5>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="text-center">Dinner</h2>
+                            <h5 class="text-center">19:30 - 23:30</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+
+        <div class="row bg-light">
+            <div class="col">
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <h3>Details</h3>
+                            <label for="inputName"> Name</label> {{form.name}}
+                        </div>
+                        <div class="form-group col-6">
+                            <h3>Reserve</h3>
+                            <label for="inputDate"> Date</label> {{form.date}}
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="inputEmail"> Email</label> {{form.email}}
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="inputTime"> Timetables</label> {{form.time}}
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="inputCel"> Phone</label> {{form.phone}}
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="inputNumber"> Number of Guests</label> {{form.Guests}}
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <button type="submit" class="btn btn-secondary btn-block">Reserve</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--- Start of Our Location -->
+        <div class="row bg-light"></div>
+        <div class="row" id="OurLocation">
+            <div class="col navMenu">
+                <h2 class="text-center">~ Our Location ~</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div id="map" class="col-md-9 map"></div>
+            <div class="col-md-3">
+                <h3>Address:</h3>
+                <p>1 Avenue 14 Janvier, Sousse </p>
+                <h3>Phone:</h3>
+                <p>73 270 650</p>
+            </div>
+        </div>
+        <!--- End of Our Location -->
+        <div class="row footer bg-light">
+            <div class="col">
+                <p class="text-center">Follow us: <a class="social-icon" href="https://www.facebook.com/#"><i class="fab fa-facebook"></i></a> <a class="social-icon" href="https://www.instagram.com/#"><i class="fab fa-instagram"></i></a></p>
+            </div>
+            <div class="col">
+                <p class="text-center">Copyright &copy; 2019</p>
+            </div>
+            <div class="col">
+                <p class="text-center">Powered by: <a href="https://www.facebook.com/raouf.maklouf">Raouf Maklouf</a></p>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <div class="row only-mobile">
+            <div class="col-6">
+                <a class="btn btn-primary btn-block text-center" href="tel:73270650"><i class="fa fa-phone" aria-hidden="true"></i> Call</a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-success btn-block text-center" href="https://api.whatsapp.com/send?phone=73270650"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        setTimeout(function() {
+            document.getElementById('hideMe').innerHTML = "";
+        }, 5000);
+        setTimeout(function() {
+            document.getElementById('hideMe').className = '';
+        }, 5000);
+    </script>
+    <script type="text/javascript" src="{% static 'risto/js/jquery-3.3.1.min.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'risto/js/bootstrap.min.js'%}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" src="{% static 'risto/js/map.js'%}"></script>
+    <script type="text/javascript" src="{% static 'risto/js/smooth-scroll.js'%}"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script type="text/javascript" src="{% static 'risto/js/image-effect.js'%}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZjOV0KA68G2YAh-rn7I3qKqCQEh_Ja0&callback=myMap">
+    </script>
+</body>
+
+</html>
