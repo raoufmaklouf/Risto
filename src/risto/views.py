@@ -9,8 +9,8 @@ import dateutil.parser
 #chek user input
 def userdate(udate):
     user_date = dateutil.parser.parse(udate)
-    tody= datetime.datetime.today()
-    if user_date > tody:
+    today= datetime.datetime.today()
+    if user_date > today:
         return True
     else:
         return False
